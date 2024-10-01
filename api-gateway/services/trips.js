@@ -15,7 +15,7 @@ export const getTrips = async (req, res, next) => {
       });
     }
 
-    return res.status(response.status).json(trips);
+    return res.status(response.status).json({trips});
   } catch (error) {
     return res.status(500).send("trips not available");
   }
